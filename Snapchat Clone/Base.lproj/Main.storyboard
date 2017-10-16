@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="h9b-ww-qVO">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13189.4" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="h9b-ww-qVO">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13165.3"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -21,6 +21,7 @@
                     </tabBar>
                     <connections>
                         <segue destination="TDy-vm-HOI" kind="relationship" relationship="viewControllers" id="Aaa-2E-LvY"/>
+                        <segue destination="7xy-0e-8oB" kind="relationship" relationship="viewControllers" id="tW5-dx-ljV"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nfe-rh-Z65" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -45,6 +46,119 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="T5c-9q-4ZG" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-478" y="-425"/>
+        </scene>
+        <!--Item-->
+        <scene sceneID="uao-NA-ozW">
+            <objects>
+                <navigationController id="7xy-0e-8oB" customClass="NavigationController" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" image="feed" id="e4N-Bg-56r"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="YKC-f8-psz">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="u7o-Es-Ci2" kind="relationship" relationship="rootViewController" id="Zoe-I3-vJe"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="mmu-qm-2wJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-444" y="-1109"/>
+        </scene>
+        <!--Feed View Controller-->
+        <scene sceneID="MSz-DL-zYe">
+            <objects>
+                <viewController id="u7o-Es-Ci2" customClass="FeedViewController" customModule="Snapchat_Clone" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="K0W-Rw-hiV"/>
+                        <viewControllerLayoutGuide type="bottom" id="e8d-gI-jCO"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="vBY-8R-fu3">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="iac-h1-Vxx">
+                                <rect key="frame" x="0.0" y="64" width="375" height="554"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="CustomExistedFeedCell" rowHeight="126" id="D18-io-I6P" customClass="CustomExistedFeedCell" customModule="Snapchat_Clone" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="126"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFill" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="D18-io-I6P" id="ff3-Tt-fwk">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="125.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Jerry Shi" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="e0m-MI-Ifd">
+                                                    <rect key="frame" x="187" y="10" width="142" height="25"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="PbN-Oc-QLd">
+                                                    <rect key="frame" x="22" y="8" width="42" height="27"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                </imageView>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="feedStatus" destination="PbN-Oc-QLd" id="WVD-3a-B72"/>
+                                            <outlet property="posterName" destination="e0m-MI-Ifd" id="tir-bk-5RX"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="iac-h1-Vxx" firstAttribute="leading" secondItem="vBY-8R-fu3" secondAttribute="leading" id="MR7-jJ-UeO"/>
+                            <constraint firstItem="iac-h1-Vxx" firstAttribute="top" secondItem="K0W-Rw-hiV" secondAttribute="bottom" id="kcL-AR-1bB"/>
+                            <constraint firstAttribute="trailing" secondItem="iac-h1-Vxx" secondAttribute="trailing" id="tyk-YT-d14"/>
+                            <constraint firstItem="e8d-gI-jCO" firstAttribute="top" secondItem="iac-h1-Vxx" secondAttribute="bottom" id="xHC-Ju-MFo"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="9Ns-zm-bhS"/>
+                    <connections>
+                        <outlet property="existFeeds" destination="iac-h1-Vxx" id="Ojx-dJ-ua7"/>
+                        <segue destination="QJq-ae-HRy" kind="show" identifier="feedToView" id="wT9-SU-mGH"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="moT-Xs-PNT" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="344.80000000000001" y="-1112.2938530734634"/>
+        </scene>
+        <!--Feed Image Controller-->
+        <scene sceneID="8tB-W3-15u">
+            <objects>
+                <viewController id="QJq-ae-HRy" customClass="FeedImageController" customModule="Snapchat_Clone" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="RQl-IC-cAw"/>
+                        <viewControllerLayoutGuide type="bottom" id="mlK-N7-dA1"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="GLC-Ny-ZFY">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Xs3-MU-52c">
+                                <rect key="frame" x="0.0" y="64" width="375" height="554"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="Xs3-MU-52c" secondAttribute="trailing" id="Z5Y-75-dV8"/>
+                            <constraint firstItem="mlK-N7-dA1" firstAttribute="top" secondItem="Xs3-MU-52c" secondAttribute="bottom" id="gxI-Wx-a4y"/>
+                            <constraint firstItem="Xs3-MU-52c" firstAttribute="leading" secondItem="GLC-Ny-ZFY" secondAttribute="leading" id="pWs-8Q-AqD"/>
+                            <constraint firstItem="Xs3-MU-52c" firstAttribute="top" secondItem="RQl-IC-cAw" secondAttribute="bottom" id="w8t-rd-E1U"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="feedImage" destination="Xs3-MU-52c" id="RAJ-8f-kTD"/>
+                        <segue destination="hT6-qX-ogH" kind="unwind" unwindAction="unWindSegueWithSegue:" id="RzN-in-5bv"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="U55-Nq-fpm" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="hT6-qX-ogH" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="1268" y="-1111"/>
         </scene>
         <!--Snapchat Clone-->
         <scene sceneID="tne-QT-ifu">
@@ -108,14 +222,88 @@
                     <navigationItem key="navigationItem" title="Snapchat Clone" id="1DI-gn-L1G"/>
                     <connections>
                         <outlet property="imageCollectionView" destination="wYC-QR-9eI" id="lwC-Kg-QfQ"/>
+                        <segue destination="ksj-CU-VVi" kind="show" identifier="pickToPost" id="Usm-KB-kPa"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="350" y="-425"/>
         </scene>
+        <!--Post View Controller-->
+        <scene sceneID="LwD-8p-O6R">
+            <objects>
+                <viewController id="ksj-CU-VVi" customClass="PostViewController" customModule="Snapchat_Clone" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="z6O-6d-fPf"/>
+                        <viewControllerLayoutGuide type="bottom" id="1Pq-al-9bY"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="a8T-8v-K5Z">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="3cH-23-AfD">
+                                <rect key="frame" x="0.0" y="64" width="375" height="554"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <label key="tableFooterView" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="NCp-Nw-oSz">
+                                    <rect key="frame" x="0.0" y="72" width="375" height="44"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                    <nil key="textColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="CustomFeedCell" id="gsS-Lf-DFf" customClass="CustomFeedCell" customModule="Snapchat_Clone" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="gsS-Lf-DFf" id="JgF-1X-tMQ">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TyW-Ri-m2i">
+                                                    <rect key="frame" x="142" y="0.0" width="132" height="44"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="feedName" destination="TyW-Ri-m2i" id="RX7-bH-Rra"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PSr-P8-bKe">
+                                <rect key="frame" x="298" y="552" width="61" height="58"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button" image="goButton"/>
+                                <connections>
+                                    <action selector="post:" destination="ksj-CU-VVi" eventType="touchUpInside" id="t7q-FJ-wiU"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="3cH-23-AfD" secondAttribute="trailing" id="E0o-Zn-OgN"/>
+                            <constraint firstItem="3cH-23-AfD" firstAttribute="top" secondItem="z6O-6d-fPf" secondAttribute="bottom" id="Rm1-bL-aYk"/>
+                            <constraint firstItem="1Pq-al-9bY" firstAttribute="top" secondItem="3cH-23-AfD" secondAttribute="bottom" id="gmt-ED-EJe"/>
+                            <constraint firstItem="3cH-23-AfD" firstAttribute="leading" secondItem="a8T-8v-K5Z" secondAttribute="leading" id="q3F-r2-YGd"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="feedName" destination="NCp-Nw-oSz" id="wWV-bR-fD5"/>
+                        <outlet property="feedTable" destination="3cH-23-AfD" id="6B4-Fb-l6S"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="yFf-Fg-JIp" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1266.4000000000001" y="-424.13793103448279"/>
+        </scene>
     </scenes>
     <resources>
+        <image name="feed" width="32" height="32"/>
+        <image name="goButton" width="132" height="130"/>
         <image name="post" width="32" height="32"/>
     </resources>
 </document>

@@ -15,6 +15,8 @@ import UIKit
 // This is one way you can store snaps. Can you think of a better way?
 var threads: [String: [UIImage]] = ["memes": [], "dog spots": [], "random": []]
 
+//whether certain has been read or not
+var alreadyReadPosts:[String:[Int]] = ["memes": [], "dog spots": [], "random": []]
 
 let threadNames = ["memes", "dog spots", "random"]
 
