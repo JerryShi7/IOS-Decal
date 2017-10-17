@@ -18,6 +18,8 @@ var threads: [String: [UIImage]] = ["memes": [], "dog spots": [], "random": []]
 //whether certain has been read or not
 var alreadyReadPosts:[String:[Int]] = ["memes": [], "dog spots": [], "random": []]
 
+var timePosted:[String:[String]] = ["memes": [], "dog spots": [], "random": []]
+
 let threadNames = ["memes", "dog spots", "random"]
 
 // The images used to populate the collection view in ImagePickerController

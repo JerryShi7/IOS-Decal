@@ -22,6 +22,7 @@ class FeedViewController: UIViewController, UITableViewDelegate, UITableViewData
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = existFeeds.dequeueReusableCell(withIdentifier: "CustomExistedFeedCell", for: indexPath) as! CustomExistedFeedCell
         let name = threadNames[indexPath.section]
+        cell.postTime.text = timePosted[name]![indexPath.item]
         if alreadyReadPosts[name]!.contains(indexPath.item) {
             cell.feedStatus.image = #imageLiteral(resourceName: "unread")
         } else {

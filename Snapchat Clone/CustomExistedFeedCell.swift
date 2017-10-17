@@ -15,4 +15,5 @@ class CustomExistedFeedCell: UITableViewCell {
     
     @IBOutlet weak var feedStatus: UIImageView!
     
+    @IBOutlet weak var postTime: UILabel!
 }
